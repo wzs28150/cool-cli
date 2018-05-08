@@ -1,45 +1,43 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="item in nav" :key="item.key"><nuxt-link :to="item.url">{{item.title}}</nuxt-link></li>
-    </ul>
-    <nuxt v-if="nav"/>
-  </div>
+<div class="full">
+	<el-scrollbar>
+		<Header :isTop="isTop" @isNav="isNav" />
+		<nuxt v-if="Nav" />
+	</el-scrollbar>
+</div>
 </template>
 <script>
-
+import Header from '../components/header/header';
 export default {
-  data(){
-    return{
-      authname:'wzs',
-      authkey:123,
-      nav:null
-    }
-  },
-  created() {
-    this.login()
-  },
-  methods: {
-    async login() {
-      try {
-        await this.$store.dispatch('login', {
-          authname: this.authname,
-          authkey: this.authkey
-        })
-        this.nav=this.$store.state.authnav.data
-        this.formError = null
-      } catch (e) {
-        this.formError = e.message
-      }
-    },
-    async logout() {
-      try {
-        await this.$store.dispatch('logout')
-      } catch (e) {
-        this.formError = e.message
-      }
-    }
-  }
+	data() {
+		return {
+			authname: 'wzs',
+			authkey: 123,
+			isTop: false,
+			Nav: false
+		}
+	},
+	components: {
+		'Header': Header
+	},
+	methods: {
+		handleScroll() {
+			var scrollpage = document.querySelector( '.el-scrollbar__wrap' )
+			var scrollTop = scrollpage.pageYOffset || scrollpage.scrollTop || scrollpage.scrollTop
+			if ( scrollTop > 0 ) {
+				this.isTop = true
+			} else {
+				this.isTop = false
+			}
+		},
+		isNav( isNav ) {
+			this.Nav = isNav
+		}
+	},
+	mounted() {
+		document.querySelector( '.el-scrollbar__wrap' )
+			.addEventListener( 'scroll', this.handleScroll )
+	}
 }
 </script>
 

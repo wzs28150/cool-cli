@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="transition-container container" style="height:2000px">
     <h1>demo</h1>
     <p><nuxt-link to="/about">About page</nuxt-link></p>
     <ul>

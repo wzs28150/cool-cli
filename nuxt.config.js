@@ -1,5 +1,8 @@
 export default {
-  css: ['~/assets/cool.scss'],
+  css: ['~/assets/sass/cool.scss', 'element-ui/lib/theme-chalk/index.css'],
+  loading: {
+    color: '#409EFF'
+  },
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'
@@ -27,5 +30,8 @@ export default {
         '^/login': 'base/router'
       }
     }]
+  ],
+  plugins: [
+    '@/plugins/element-ui'
   ]
 }

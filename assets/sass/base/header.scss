@@ -1,0 +1,23 @@
+.el-header {
+  width           : 100%;
+  position        : fixed;
+  top             : 0;
+  padding         : 0;
+  box-shadow      : 0 0 2px #ccc;
+  background-color: #fff;
+
+  .logo {
+    height     : 60px;
+    line-height: 60px;
+    font-family: 'Cocogoose_trial_2';
+    font-weight: bold;
+    font-size  : 32px;
+    color      : #409EFF;
+  }
+
+  .el-menu {
+    a {
+      display: block;
+    }
+  }
+}
