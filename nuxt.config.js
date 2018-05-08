@@ -1,5 +1,5 @@
 export default {
-  css: ['~/assets/main.css'],
+  css: ['~/assets/cool.scss'],
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'
@@ -9,8 +9,23 @@ export default {
     '@nuxtjs/proxy'
   ],
   proxy: [
-    ['/getbanner', { target: 'http://114.115.177.23:9000/mock/11/', pathRewrite: { '^/getbanner': 'index/getbanner' } }],
-    ['/getabout', { target: 'http://114.115.177.23:9000/mock/11/', pathRewrite: { '^/getabout': 'index/getabout' } }],
-    ['/login', { target: 'http://114.115.177.23:9000/mock/11/', pathRewrite: { '^/login': 'base/router' } }]
+    ['/getbanner', {
+      target: 'http://114.115.177.23:9000/mock/11/',
+      pathRewrite: {
+        '^/getbanner': 'index/getbanner'
+      }
+    }],
+    ['/getabout', {
+      target: 'http://114.115.177.23:9000/mock/11/',
+      pathRewrite: {
+        '^/getabout': 'index/getabout'
+      }
+    }],
+    ['/login', {
+      target: 'http://114.115.177.23:9000/mock/11/',
+      pathRewrite: {
+        '^/login': 'base/router'
+      }
+    }]
   ]
 }

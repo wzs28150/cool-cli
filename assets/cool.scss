@@ -1,0 +1,13 @@
+@import 'pageTransform.scss';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  overflow   : hidden;
+}
+
+.container {
+  text-align : center;
+  padding-top: 200px;
+  font-size  : 20px;
+  transition : all 0.5s cubic-bezier(.55, 0, .1, 1);
+}

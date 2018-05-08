@@ -27,6 +27,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/proxy": "^1.1.2",
+    "element-ui": "^2.3.7",
     "nuxt-edge": "latest"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1"
   }
 }
