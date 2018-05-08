@@ -1,14 +1,32 @@
 {
-  "name": "example-axios",
+  "name": "cool-cli",
   "version": "1.0.0",
-  "dependencies": {
-    "@nuxtjs/axios": "^5.0.0",
-    "@nuxtjs/proxy": "^1.1.2",
-    "nuxt-edge": "latest"
-  },
+  "description": "nuxt vue ssr cool-cli",
+  "main": "index.js",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzs28150/cool-cli.git"
+  },
+  "keywords": [
+    "cool-cli",
+    "nuxt",
+    "vue",
+    "ssr"
+  ],
+  "author": "wzs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzs28150/cool-cli/issues"
+  },
+  "homepage": "https://github.com/wzs28150/cool-cli#readme",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/proxy": "^1.1.2",
+    "nuxt-edge": "latest"
   }
 }
