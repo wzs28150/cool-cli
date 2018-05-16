@@ -1,32 +1,18 @@
-# Axios Proxy Example
+# cool cli Nuxt Vue SSR Example
 
 ## Install
 
 ```bash
-$ yarn add @nuxtjs/axios @nuxtjs/proxy
+$ npm install
+```
+## Build
+
+```bash
+$ npm build
 ```
 
-## Nuxt.config.js
+## Start
 
-```json
-{
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/proxy'
-  ],
-  proxy: [
-    ['/api/dog', { target: 'https://dog.ceo/', pathRewrite: { '^/api/dog': '/api/breeds/image/random' } }]
-  ]
-}
+```bash
+$ npm start
 ```
-
-### Use Axios
-
-```js
-async asyncData({ app }) {
-  const ip = await app.$axios.$get('http://icanhazip.com')
-  return { ip }
-}
-```
-
-More detail, please refer [axios-module](https://github.com/nuxt-community/axios-module).
